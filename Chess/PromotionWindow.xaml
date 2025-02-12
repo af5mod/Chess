@@ -1,0 +1,40 @@
+﻿<Window x:Class="Chess.PromotionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chess"
+        mc:Ignorable="d"
+        Title="PromotionWindow" Height="250" Width="400">
+    <Grid Background="Sienna">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="1.5*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Выберите фигуру:"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="20"
+                       Foreground="Beige">
+        </TextBlock>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width ="*"></ColumnDefinition>
+                <ColumnDefinition Width ="*"></ColumnDefinition>
+                <ColumnDefinition Width ="*"></ColumnDefinition>
+                <ColumnDefinition Width ="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="♕" HorizontalAlignment="Center" VerticalAlignment="Center"
+                           FontSize="50" MouseDown="MouseDownChooseQueen"></TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="1" Text="♘" HorizontalAlignment="Center" VerticalAlignment="Center"
+                           FontSize="50" MouseDown="MouseDownChooseKnight"></TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="2" Text="♗" HorizontalAlignment="Center" VerticalAlignment="Center"
+                           FontSize="50" MouseDown="MouseDownChooseBishop"></TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="3" Text="♖" HorizontalAlignment="Center" VerticalAlignment="Center"
+                           FontSize="50" MouseDown="MouseDownChooseRook"></TextBlock>
+        </Grid>
+    </Grid>
+</Window>
